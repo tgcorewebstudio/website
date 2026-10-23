@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TG Core — Web Studio in Tempe, Arizona</title>
+  <meta name="description" content="TG Core is a Tempe, Arizona web studio crafting futuristic, high-performance websites for people and businesses. Years of progress, hard work and passion in every build." />
+  <meta name="theme-color" content="#03060d" />
+  <link rel="icon" type="image/png" href="tgcore-crest.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Loader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <img class="loader__crest logo-img" src="tgcore-logo.png" alt="" width="580" height="380" />
+    <div class="loader__meta">
+      <span class="mono">INITIALIZING CORE</span>
+      <span class="mono loader__pct" id="loaderPct">000</span>
+    </div>
+    <div class="loader__bar"><span id="loaderBar"></span></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__left">
+      <a href="#top" class="brand">
+        <img class="brand__crest logo-img" src="tgcore-crest.png" alt="" width="520" height="330" />
+        <span class="brand__name">TG CORE<sup>™</sup><span class="sr-only">, back to top</span></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <nav class="header__nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#journey">Journey</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#start" class="header__tab">Submit your company</a>
+    </nav>
+    <a href="#contact" class="btn btn--ghost magnetic header__cta">Reach out</a>
+  </header>
+
+  <!-- Fullscreen menu -->
+  <nav class="menu" id="menu" aria-label="Site menu" aria-hidden="true">
+    <div class="menu__inner">
+      <div class="menu__links">
+        <a href="#services"><span class="mono">01</span>Services</a>
+        <a href="#process"><span class="mono">02</span>Process</a>
+        <a href="#work"><span class="mono">03</span>Work</a>
+        <a href="#journey"><span class="mono">04</span>Journey</a>
+        <a href="#pricing"><span class="mono">05</span>Pricing</a>
+        <a href="#start"><span class="mono">06</span>Submit your company</a>
+        <a href="#contact"><span class="mono">07</span>Contact</a>
+      </div>
+      <div class="menu__side">
+        <p class="mono label">Studio</p>
+        <p>Tempe, Arizona<br />Serving clients worldwide</p>
+        <p class="mono label">Contact</p>
+        <p><a href="mailto:tgcore.webstudio@gmail.com">tgcore.webstudio@gmail.com<span class="sr-only"> (opens your email app)</span></a><br /><a href="tel:+14806670415">+1 (480) 667-0415</a></p>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-label="Introduction">
+      <canvas class="hero__globe" id="globe" aria-hidden="true"></canvas>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <div class="hero__labels" id="globeLabels" aria-hidden="true"></div>
+
+      <div class="hud hud--tl mono" aria-hidden="true">
+        <span>33.4255° N, 111.9400° W</span>
+        <span>TEMPE, ARIZONA — HQ</span>
+      </div>
+      <div class="hud hud--tr mono">
+        <span class="hud__status"><span class="status-dot" aria-hidden="true"></span>Accepting new projects</span>
+        <span class="hud__time">AZ <time id="azTime">--:--:--</time></span>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow mono"><span class="line"></span>TG Core — Media Company &amp; Web Studio</p>
+        <h1 class="hero__title">
+          <span class="scramble" data-text="CRAFTING DIGITAL">CRAFTING DIGITAL</span>
+          <span class="scramble" data-text="EMPIRES FOR">EMPIRES FOR</span>
+          <span><em class="serif">ambitious</em> <span class="scramble" data-text="BRANDS">BRANDS</span></span>
+        </h1>
+        <p class="hero__sub">Futuristic, fast and fiercely crafted websites — built in Arizona for people and businesses everywhere.</p>
+        <div class="hero__actions">
+          <a href="#start" class="btn btn--primary magnetic">Submit your company
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          <a href="#" class="btn btn--ghost magnetic" data-booking hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>Book a call</a>
+          <a href="#work" class="btn btn--ghost magnetic">See the work</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll mono" aria-hidden="true"><span></span>Scroll to explore</div>
+      <p class="hero__hint mono" aria-hidden="true">Drag the globe</p>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Web Design</span><i>✦</i><span>Development</span><i>✦</i><span>E-Commerce</span><i>✦</i><span>Brand Identity</span><i>✦</i><span>SEO</span><i>✦</i><span>3D &amp; Motion</span><i>✦</i>
+        <span>Web Design</span><i>✦</i><span>Development</span><i>✦</i><span>E-Commerce</span><i>✦</i><span>Brand Identity</span><i>✦</i><span>SEO</span><i>✦</i><span>3D &amp; Motion</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- MANIFESTO -->
+    <section class="section manifesto" id="story" aria-labelledby="storyTitle">
+      <div class="container">
+        <p class="eyebrow mono"><span class="line"></span>Our story</p>
+        <h2 id="storyTitle" class="sr-only">Our story</h2>
+        <p class="manifesto__text reveal-words">
+          Several years of progress, late nights and relentless hard work built TG Core. What began as a passion for code and design in Tempe became a studio that treats every website like a legacy — engineered to perform, designed to be remembered, and crafted with the care of people who genuinely love this work.
+        </p>
+        <div class="manifesto__sig">
+          <img class="logo-img" src="tgcore-crest.png" alt="" width="520" height="330" loading="lazy" />
+          <div>
+            <p class="serif">Built with passion. Proven by progress.</p>
+            <p class="mono dim">— The TG Core team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS / INFOGRAPHICS -->
+    <section class="section stats" id="stats" aria-labelledby="statsTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono"><span class="line"></span>By the numbers</p>
+          <h2 id="statsTitle" class="h2">Progress you can <em class="serif">measure</em></h2>
+        </div>
+
+        <div class="counters">
+          <div class="counter reveal"><span class="counter__num counter__num--word mono">Many years</span><span class="counter__label">Of progress &amp; hard work</span></div>
+          <div class="counter reveal"><span class="counter__num mono" data-count="120" data-suffix="+">0</span><span class="counter__label">Pages designed &amp; shipped</span></div>
+          <div class="counter reveal"><span class="counter__num mono" data-count="98" data-suffix="%">0</span><span class="counter__label">Client satisfaction</span></div>
+          <div class="counter reveal"><span class="counter__num mono" data-count="14">0</span><span class="counter__label">Days, average launch time</span></div>
+        </div>
+
+        <div class="infographics">
+          <!-- Growth chart -->
+          <figure class="card chart reveal" aria-labelledby="growthCap">
+            <figcaption id="growthCap">
+              <span class="mono label">Growth — projects delivered per year</span>
+              <span class="chart__legend"><i></i>Projects</span>
+            </figcaption>
+            <div class="chart__wrap">
+              <svg class="growth" id="growthChart" viewBox="0 0 600 280" aria-hidden="true" focusable="false"></svg>
+              <div class="chart__tip mono" id="growthTip" aria-hidden="true"></div>
+              <ul class="sr-only" id="growthData"></ul>
+            </div>
+          </figure>
+
+          <!-- Lighthouse rings -->
+          <figure class="card rings reveal" aria-labelledby="ringsCap">
+            <figcaption id="ringsCap"><span class="mono label">Quality standard — target scores on every build</span></figcaption>
+            <div class="rings__grid">
+              <div class="ring" data-value="98"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring__bg" cx="50" cy="50" r="42" /><circle class="ring__fg" cx="50" cy="50" r="42" /></svg><span class="ring__val mono">0</span><span class="ring__label">Performance</span></div>
+              <div class="ring" data-value="100"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring__bg" cx="50" cy="50" r="42" /><circle class="ring__fg" cx="50" cy="50" r="42" /></svg><span class="ring__val mono">0</span><span class="ring__label">Accessibility</span></div>
+              <div class="ring" data-value="100"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring__bg" cx="50" cy="50" r="42" /><circle class="ring__fg" cx="50" cy="50" r="42" /></svg><span class="ring__val mono">0</span><span class="ring__label">Best Practices</span></div>
+              <div class="ring" data-value="100"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="ring__bg" cx="50" cy="50" r="42" /><circle class="ring__fg" cx="50" cy="50" r="42" /></svg><span class="ring__val mono">0</span><span class="ring__label">SEO</span></div>
+            </div>
+          </figure>
+
+          <!-- Time split -->
+          <figure class="card split reveal" aria-labelledby="splitCap">
+            <figcaption id="splitCap"><span class="mono label">Where the hours go — typical project</span></figcaption>
+            <div class="split__bar" aria-hidden="true">
+              <span style="--w:15%" data-label="Strategy"></span>
+              <span style="--w:35%" data-label="Design"></span>
+              <span style="--w:40%" data-label="Development"></span>
+              <span style="--w:10%" data-label="Launch"></span>
+            </div>
+            <ul class="split__legend">
+              <li><i class="s1"></i>Strategy <b class="mono">15%</b></li>
+              <li><i class="s2"></i>Design <b class="mono">35%</b></li>
+              <li><i class="s3"></i>Development <b class="mono">40%</b></li>
+              <li><i class="s4"></i>Testing &amp; launch <b class="mono">10%</b></li>
+            </ul>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services" aria-labelledby="servicesTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono"><span class="line"></span>Services</p>
+          <h2 id="servicesTitle" class="h2">Everything your brand needs to <em class="serif">rule online</em></h2>
+        </div>
+        <div class="service-grid">
+          <div class="service spot tilt reveal">
+            <span class="mono service__n">01</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M3 8h18M8 21h8" /></svg>
+            <h3>Web Design</h3>
+            <p>Custom, cinematic interfaces with motion and personality — never a cookie-cutter template.</p>
+          </div>
+          <div class="service spot tilt reveal">
+            <span class="mono service__n">02</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16" /></svg>
+            <h3>Development</h3>
+            <p>Lightning-fast, responsive builds with clean code, CMS editing and rock-solid hosting.</p>
+          </div>
+          <div class="service spot tilt reveal">
+            <span class="mono service__n">03</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 8H6.2" /><circle cx="9" cy="19.5" r="1.5" /><circle cx="17" cy="19.5" r="1.5" /></svg>
+            <h3>E-Commerce</h3>
+            <p>Online stores that convert — product pages, secure checkout, payments and inventory.</p>
+          </div>
+          <div class="service spot tilt reveal">
+            <span class="mono service__n">04</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z" /></svg>
+            <h3>Brand Identity</h3>
+            <p>Logos, color systems and typography that make your company instantly recognizable.</p>
+          </div>
+          <div class="service spot tilt reveal">
+            <span class="mono service__n">05</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="M20 20l-4-4M8 11h6M11 8v6" /></svg>
+            <h3>SEO &amp; Performance</h3>
+            <p>Technical SEO, Google Business setup and speed tuning so customers actually find you.</p>
+          </div>
+          <div class="service spot tilt reveal">
+            <span class="mono service__n">06</span>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8" /><path d="M15 7h6v6" /></svg>
+            <h3>Care &amp; Growth</h3>
+            <p>Ongoing updates, analytics reports and improvements — your site keeps getting better.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process" id="process" aria-labelledby="processTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono"><span class="line"></span>Process</p>
+          <h2 id="processTitle" class="h2">From idea to <em class="serif">launch</em> in six moves</h2>
+        </div>
+        <ol class="steps" id="steps">
+          <li class="step"><span class="step__node mono">01</span><div><h3>Discover</h3><p>You submit your company. We study your business, goals and competitors.</p></div></li>
+          <li class="step"><span class="step__node mono">02</span><div><h3>Blueprint</h3><p>Sitemap, content plan and features — benchmarked against the world's best agencies.</p></div></li>
+          <li class="step"><span class="step__node mono">03</span><div><h3>Design</h3><p>High-fidelity visuals and motion concepts you can click through and review.</p></div></li>
+          <li class="step"><span class="step__node mono">04</span><div><h3>Build</h3><p>Pixel-perfect development, optimized for every screen and search engine.</p></div></li>
+          <li class="step"><span class="step__node mono">05</span><div><h3>Launch</h3><p>Testing, domain, hosting and analytics — then we go live together.</p></div></li>
+          <li class="step"><span class="step__node mono">06</span><div><h3>Evolve</h3><p>We monitor, refine and grow your site as your business grows.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- BENCHMARK -->
+    <section class="section bench" id="benchmark" aria-labelledby="benchTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono"><span class="line"></span>World-class standard</p>
+          <h2 id="benchTitle" class="h2">Built like the <em class="serif">world's best</em> agencies</h2>
+          <p class="lead">We study award-winning studios and bring the same craft to businesses of every size.</p>
+        </div>
+        <div class="card bench__wrap reveal">
+          <table class="bench__table">
+            <caption class="sr-only">Typical template website compared with a TG Core build</caption>
+            <thead>
+              <tr><th scope="col">Feature</th><th scope="col">Typical template</th><th scope="col">TG Core build</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Custom design, made for your brand</th><td><span class="no">No</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><th scope="row">3D, motion &amp; interactive moments</th><td><span class="no">No</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><th scope="row">90+ Lighthouse performance target</th><td><span class="no">Rarely</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><th scope="row">Accessibility (WCAG AA)</th><td><span class="no">Rarely</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><th scope="row">Local SEO for Arizona &amp; beyond</th><td><span class="no">No</span></td><td><span class="yes">Yes</span></td></tr>
+              <tr><th scope="row">A real team you can call</th><td><span class="no">No</span></td><td><span class="yes">Yes</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="section work" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow mono"><span class="line"></span>Selected work</p>
+            <h2 id="workTitle" class="h2">Worlds we've <em class="serif">crafted</em></h2>
+          </div>
+          <a href="#start" class="btn btn--ghost magnetic">Yours could be next</a>
+        </div>
+        <div class="work-grid">
+          <a href="#start" class="project tilt reveal" style="--hue:205">
+            <div class="project__shot"><div class="mock"><div class="mock__bar"><i></i><i></i><i></i></div><div class="mock__hero"></div><div class="mock__row"><span></span><span></span><span></span></div></div></div>
+            <div class="project__meta"><h3>Desert Bloom Café</h3><span class="mono">Hospitality · Concept</span></div>
+          </a>
+          <a href="#start" class="project tilt reveal" style="--hue:225">
+            <div class="project__shot"><div class="mock mock--split"><div class="mock__bar"><i></i><i></i><i></i></div><div class="mock__hero"></div><div class="mock__row"><span></span><span></span></div></div></div>
+            <div class="project__meta"><h3>Apex Roofing AZ</h3><span class="mono">Home services · Concept</span></div>
+          </a>
+          <a href="#start" class="project tilt reveal" style="--hue:190">
+            <div class="project__shot"><div class="mock"><div class="mock__bar"><i></i><i></i><i></i></div><div class="mock__hero mock__hero--round"></div><div class="mock__row"><span></span><span></span><span></span><span></span></div></div></div>
+            <div class="project__meta"><h3>Lumen Dental Studio</h3><span class="mono">Healthcare · Concept</span></div>
+          </a>
+          <a href="#start" class="project tilt reveal" style="--hue:245">
+            <div class="project__shot"><div class="mock mock--split"><div class="mock__bar"><i></i><i></i><i></i></div><div class="mock__hero"></div><div class="mock__row"><span></span><span></span><span></span></div></div></div>
+            <div class="project__meta"><h3>Nova Fitness Lab</h3><span class="mono">Fitness · Concept</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="section journey" id="journey" aria-labelledby="journeyTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono"><span class="line"></span>The journey</p>
+          <h2 id="journeyTitle" class="h2">Years of progress. <em class="serif">Countless</em> late nights.</h2>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline__line"><span id="timelineFill"></span></div>
+          <div class="tl reveal"><span class="tl__year mono">2024</span><h3>The first line of code</h3><p>A passion project in Tempe: teaching ourselves design and development, one late night at a time.</p></div>
+          <div class="tl reveal"><span class="tl__year mono">2025</span><h3>First clients</h3><p>Friends, family and local businesses trusted us with their first websites, and came back for more.</p></div>
+          <div class="tl reveal"><span class="tl__year mono">2025</span><h3>TG Core is born</h3><p>We became a media company and web studio with a crest, a process and a mission.</p></div>
+          <div class="tl reveal"><span class="tl__year mono">2026</span><h3>Leveling up</h3><p>E-commerce, SEO, 3D and motion joined the toolkit. Every project raises our standard.</p></div>
+          <div class="tl reveal tl--now"><span class="tl__year mono">Next</span><h3>Your chapter</h3><p>The next great website in our story could be yours. Let's build it together.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section pricing" id="pricing" aria-labelledby="pricingTitle">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow mono"><span class="line"></span>Packages</p>
+          <h2 id="pricingTitle" class="h2">Choose your <em class="serif">launchpad</em></h2>
+        </div>
+        <div class="price-grid">
+          <div class="price spot reveal">
+            <p class="badge badge--offer mono">Launch offer — save $200</p>
+            <p class="mono label">Launch</p>
+            <p class="price__amt"><span class="sr-only">Regular price </span><s class="price__old">$800</s> <span class="sr-only">now </span>$600</p>
+            <p class="dim">For personal brands and new businesses.</p>
+            <ul><li>Up to 5 custom-designed pages</li><li>Mobile-first, works on every screen</li><li>Contact form &amp; Google Maps</li><li>SEO basics: titles, sitemap, Google Search Console</li></ul>
+            <a href="#start" class="btn btn--ghost" data-plan="Launch">Start with Launch</a>
+          </div>
+          <div class="price price--feat spot reveal">
+            <p class="badge mono">Most popular</p>
+            <p class="mono label">Growth</p>
+            <p class="price__amt">$1,200</p>
+            <p class="dim">For growing businesses ready to stand out.</p>
+            <ul><li>Up to 12 pages + easy content editor</li><li>Motion &amp; interactive design</li><li>Local SEO &amp; Google Analytics setup</li><li>Online booking or store integration</li></ul>
+            <a href="#start" class="btn btn--primary" data-plan="Growth">Start with Growth</a>
+          </div>
+          <div class="price spot reveal">
+            <p class="mono label">Empire</p>
+            <p class="price__amt">Custom</p>
+            <p class="dim">For brands that want a flagship experience. Priced together, per project.</p>
+            <ul><li>Unlimited pages &amp; custom features</li><li>3D and WebGL experiences, like our globe</li><li>Brand style guide: colors, type &amp; logo files</li><li>Advanced integrations: payments, CRM, automations</li></ul>
+            <a href="#start" class="btn btn--ghost" data-plan="Empire">Start with Empire</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBMIT YOUR COMPANY -->
+    <section class="section start" id="start" aria-labelledby="startTitle">
+      <div class="container start__grid">
+        <div class="start__intro">
+          <p class="eyebrow mono"><span class="line"></span>Submit your company</p>
+          <h2 id="startTitle" class="h2">Tell us about your <em class="serif">business</em></h2>
+          <p class="lead">Send us your company details. We review every submission personally and reply within 24–48 hours with ideas and a plan.</p>
+          <ul class="start__perks">
+            <li><span class="mono">✓</span>Free review &amp; consultation</li>
+            <li><span class="mono">✓</span>No commitment required</li>
+            <li><span class="mono">✓</span>Reply within 1–2 business days</li>
+          </ul>
+          <p class="start__or" data-booking-wrap hidden>Prefer to talk first?</p>
+          <a href="#" class="btn btn--ghost magnetic" data-booking hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>Book a free call</a>
+        </div>
+
+        <div class="card form-card">
+          <form id="intake" novalidate aria-describedby="formIntro">
+            <div class="form-progress" aria-hidden="true"><span id="formBar"></span></div>
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp" />
+            <p class="form-intro" id="formIntro">3 short steps. <b>Continue</b> moves to the next step and <b>Back</b> returns to the previous one. Nothing is sent until you press <b>Send for review</b>.</p>
+            <p class="mono form-step-label" id="stepLabel" aria-live="polite">Step 1 of 3: About you</p>
+
+            <fieldset class="fstep is-active" data-step="1">
+              <legend class="sr-only">About you</legend>
+              <div class="field"><label for="f-name">Full name <b aria-hidden="true">*</b></label><input id="f-name" name="name" autocomplete="name" required aria-describedby="e-name" /><p class="err" id="e-name"></p></div>
+              <div class="field"><label for="f-email">Email <b aria-hidden="true">*</b></label><input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email" /><p class="err" id="e-email"></p></div>
+              <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="e-phone" /><p class="err" id="e-phone"></p></div>
+            </fieldset>
+
+            <fieldset class="fstep" data-step="2">
+              <legend class="sr-only">Your company</legend>
+              <div class="field"><label for="f-company">Company name <b aria-hidden="true">*</b></label><input id="f-company" name="company" autocomplete="organization" required aria-describedby="e-company" /><p class="err" id="e-company"></p></div>
+              <div class="field"><label for="f-industry">Industry <b aria-hidden="true">*</b></label>
+                <select id="f-industry" name="industry" required aria-describedby="e-industry">
+                  <option value="">Select an industry</option>
+                  <option>Restaurant &amp; hospitality</option><option>Home services &amp; construction</option><option>Health &amp; wellness</option><option>Beauty &amp; salon</option><option>Real estate</option><option>Retail &amp; e-commerce</option><option>Professional services</option><option>Personal brand or creator</option><option>Non-profit</option><option>Other</option>
+                </select><p class="err" id="e-industry"></p></div>
+              <div class="field"><label for="f-site">Current website <span class="dim">(if any)</span></label><input id="f-site" name="website" type="url" inputmode="url" placeholder="https://" autocomplete="url" aria-describedby="e-site" /><p class="err" id="e-site"></p></div>
+              <div class="field"><label for="f-loc">City or location</label><input id="f-loc" name="location" autocomplete="address-level2" placeholder="e.g. Tempe, AZ" /></div>
+            </fieldset>
+
+            <fieldset class="fstep" data-step="3">
+              <legend class="sr-only">Your project</legend>
+              <div class="field">
+                <p class="field__label" id="l-services">What do you need?</p>
+                <div class="chips" role="group" aria-labelledby="l-services">
+                  <label class="chip"><input type="checkbox" name="services" value="New website" /><span>New website</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="Redesign" /><span>Redesign</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="E-commerce" /><span>E-commerce</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="Branding &amp; logo" /><span>Branding &amp; logo</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="SEO" /><span>SEO</span></label>
+                  <label class="chip"><input type="checkbox" name="services" value="Maintenance" /><span>Maintenance</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <p class="field__label" id="l-budget">Budget</p>
+                <div class="chips" role="radiogroup" aria-labelledby="l-budget">
+                  <label class="chip"><input type="radio" name="budget" value="Under $1,000" /><span>&lt; $1k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="$1,000–$2,500" /><span>$1k–2.5k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="$2,500–$5,000" /><span>$2.5k–5k</span></label>
+                  <label class="chip"><input type="radio" name="budget" value="$5,000+" /><span>$5k+</span></label>
+                </div>
+              </div>
+              <div class="field"><label for="f-plan">Package of interest</label>
+                <select id="f-plan" name="plan"><option value="">Not sure yet</option><option value="Launch">Launch — $600</option><option value="Growth">Growth — $1,200</option><option value="Empire">Empire — Custom</option></select></div>
+              <div class="field"><label for="f-goals">Tell us about your business &amp; goals <b aria-hidden="true">*</b></label><textarea id="f-goals" name="goals" rows="4" required aria-describedby="h-goals e-goals"></textarea><p class="help dim" id="h-goals">What you do, who your customers are, and what you want the site to achieve.</p><p class="err" id="e-goals"></p></div>
+            </fieldset>
+
+            <div class="form-nav">
+              <button type="button" class="btn btn--ghost" id="prevBtn" hidden>Back</button>
+              <button type="button" class="btn btn--primary" id="nextBtn">Continue
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
+              <button type="submit" class="btn btn--primary" id="submitBtn" hidden>Send for review</button>
+            </div>
+            <p class="mono dim form-note">Draft is saved on this device as you type.</p>
+          </form>
+
+          <div class="form-success" id="formSuccess" hidden tabindex="-1">
+            <img class="logo-img" src="tgcore-logo.png" alt="TG Core Media Company crest" width="580" height="380" loading="lazy" />
+            <h3>Submission received</h3>
+            <p id="successMsg">Thank you! The TG Core team will review your company and reply within 1–2 business days.</p>
+            <button type="button" class="btn btn--ghost" id="resetForm">Submit another company</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faqTitle">
+      <div class="container faq__grid">
+        <div>
+          <p class="eyebrow mono"><span class="line"></span>FAQ</p>
+          <h2 id="faqTitle" class="h2">Questions, <em class="serif">answered</em></h2>
+        </div>
+        <div class="faq__list">
+          <details><summary>How long does a website take?</summary><p>Most Launch sites go live in about 2 weeks. Growth projects take 3–6 weeks, and Empire builds are scheduled based on scope.</p></details>
+          <details><summary>Do you only work with Arizona businesses?</summary><p>We're proudly based in Tempe, but we work with people and businesses anywhere — everything can be done remotely.</p></details>
+          <details><summary>Can I edit the website myself?</summary><p>Yes. Growth and Empire packages include an easy content editor, and we'll show you how to use it.</p></details>
+          <details><summary>Do you handle domain and hosting?</summary><p>We set up your domain, fast hosting, SSL and business email so you don't have to touch anything technical.</p></details>
+          <details><summary>What happens after I submit my company?</summary><p>We review your details, research your market and competitors, then reach out with ideas, a plan and a quote. No obligation.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+      <!-- CONTACT -->
+      <section class="contact" id="contact" aria-labelledby="contactTitle">
+        <div class="contact__glow" aria-hidden="true"></div>
+        <div class="container">
+          <p class="eyebrow mono"><span class="line"></span>Contact</p>
+          <h2 id="contactTitle" class="contact__title">Let's build your <em class="serif">legacy</em></h2>
+          <address class="contact__grid">
+            <a class="contact__item spot" href="mailto:tgcore.webstudio@gmail.com">
+              <span class="mono label">Email</span>
+              <span class="contact__val">tgcore.webstudio@gmail.com</span><span class="sr-only"> (opens your email app)</span>
+            </a>
+            <a class="contact__item spot" href="tel:+14806670415">
+              <span class="mono label">Phone</span>
+              <span class="contact__val">+1 (480) 667-0415</span>
+            </a>
+            <div class="contact__item">
+              <span class="mono label">Studio</span>
+              <span class="contact__val">Tempe, Arizona</span>
+            </div>
+            <a class="contact__item spot" href="https://www.instagram.com/tg.coremedia/" target="_blank" rel="noopener">
+              <span class="mono label">Instagram</span>
+              <span class="contact__val contact__val--ig"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg>@tg.coremedia</span><span class="sr-only"> (opens Instagram in a new tab)</span>
+            </a>
+          </address>
+          <div class="contact__actions">
+            <a href="#" class="btn btn--primary magnetic" data-booking hidden><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>Book a call</a>
+            <button type="button" class="btn btn--ghost" id="copyEmail">Copy email</button>
+          </div>
+        </div>
+      </section>
+
+    <div class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <img class="logo-img" src="tgcore-crest.png" alt="" width="520" height="330" loading="lazy" />
+          <div><p class="serif footer__name">TG Core</p><p class="mono dim">Media Company &amp; Web Studio</p></div>
+        </div>
+        <p class="mono dim">© <span id="year">2026</span> TG Core. Crafted with passion in Tempe, AZ.</p>
+        <a href="https://www.instagram.com/tg.coremedia/" class="footer__social" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" /></svg><span>@tg.coremedia</span><span class="sr-only"> (opens Instagram in a new tab)</span></a>
+        <a href="#top" class="mono back-top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating contact -->
+  <aside class="chat" id="chat" aria-label="Quick contact">
+    <div class="chat__panel" id="chatPanel" role="dialog" aria-labelledby="chatTitle" hidden>
+      <p class="chat__title" id="chatTitle"><span class="status-dot" aria-hidden="true"></span>Message TG Core</p>
+      <p class="chat__bubble">Hi! Tell us what you're working on — a real person on our Tempe team reads every message and replies by email or text.</p>
+
+      <form class="chat__form" id="chatForm" novalidate>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp" />
+        <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required aria-describedby="ce-name" /><p class="err" id="ce-name"></p></div>
+        <div class="field"><label for="c-contact">Email or phone</label><input id="c-contact" name="contact" autocomplete="email" inputmode="email" required aria-describedby="ce-contact" /><p class="err" id="ce-contact"></p></div>
+        <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="3" required aria-describedby="ce-msg"></textarea><p class="err" id="ce-msg"></p></div>
+        <button type="submit" class="btn btn--primary chat__send" id="chatSend">Send message
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l16-8-6 16-3-7z" /></svg></button>
+      </form>
+      <div class="chat__done" id="chatDone" hidden tabindex="-1">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8 12l3 3 5-6" /></svg>
+        <p><b>Message sent!</b></p>
+        <p class="chat__sub" id="chatDoneMsg">We'll get back to you soon.</p>
+        <button type="button" class="btn btn--ghost" id="chatAgain">Send another</button>
+      </div>
+
+      <p class="chat__more mono">Other ways to reach us</p>
+      <div class="chat__quick">
+        <a class="chat__q" href="sms:+14806670415?&body=Hi%20TG%20Core!%20I%27m%20interested%20in%20a%20website%20for%20my%20business.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" /></svg>Text<span class="sr-only"> (opens your messaging app)</span></a>
+        <a class="chat__q" href="#" data-booking hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>Book</a>
+        <a class="chat__q" href="tel:+14806670415">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1" /></svg>Call</a>
+        <a class="chat__q" href="#start">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>Submit</a>
+      </div>
+    </div>
+    <button type="button" class="chat__btn magnetic" id="chatBtn" aria-expanded="false" aria-controls="chatPanel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z" /><path d="M8 10h8M8 13h5" /></svg>
+      <span class="chat__btn-label">Text us</span>
+    </button>
+  </aside>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
